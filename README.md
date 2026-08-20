@@ -25,9 +25,10 @@ python3 -m http.server 8000
 
 ## Deploying
 
-Pushing to `main` publishes the site through GitHub Pages via
-`.github/workflows/pages.yml`. Enable Pages for the repository with
-**Settings → Pages → Source: GitHub Actions** once, and the workflow handles the rest.
+The site is served straight from the repository by GitHub Pages
+(**Settings → Pages → Source: Deploy from a branch → `main` / root**), so pushing
+to `main` publishes it. No build step and no workflow are involved — `.nojekyll`
+keeps Pages from running the files through Jekyll.
 
 ## Editing
 
